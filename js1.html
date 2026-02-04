@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Assignment 3 JavaScript Problem 1</title>
+        <script>
+            //Prompt the user for their first and last names and display it in an alert
+            firstName = prompt("What is your first name?", "First");
+            lastName = prompt("What is your last name?", "Last");
+            alert("Your name is " + firstName + " " + lastName);
+
+            //Ask for the number of children the person has and print it out on the page
+            numChild = prompt("How many children do you have?", "0");
+            if (numChild == 0) {
+                document.write("<h1>You have no children</h1>");
+            }
+            else if (numChild == 1) {
+                document.write("<h1>You have 1 child</h1>");
+            }
+            else {
+                document.write("<h1>You have " + numChild + " children</h1>");
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

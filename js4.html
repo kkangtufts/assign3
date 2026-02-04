@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Assignment 3 JavaScript Problem 4</title>
+        <script>
+            firstNum = prompt("Give a number: ", 1);
+            secondNum = prompt("Give another number: ", 10);
+            //Use the small number as the minimum and the large number as the maximum
+            min = 0;
+            max = 0;
+            if (firstNum > secondNum) {
+                min = secondNum;
+                max = firstNum;
+            }
+            else {
+                min = firstNum;
+                max = secondNum;
+            }
+            //Change these to ints
+            min = parseInt(min);
+            max = parseInt(max);
+            //With the numbers given, calculate the range
+            range = max - min;
+            //Presume the range are inclusive (min and max are in the range)
+            sum = 0;
+            oddNumStr = "";
+            checkNum = 0;
+            //This flag is to check to see if the first odd value (to prevent a leading comma)
+            firstOdd = true;
+            for (i = 0; i <= range; i++) {
+                checkNum = min + i;
+                //If there is a remainder, then it is an odd number
+                if ((checkNum % 2) == 1) {
+                    //If it is the first number, do not add the comma
+                    if (firstOdd == true) {
+                        oddNumStr = "" + checkNum;
+                        firstOdd = false;
+                    }
+                    else {
+                        oddNumStr = oddNumStr + ", " + checkNum;
+                    }
+                }
+                //Add it to the sum
+                sum = sum + checkNum;
+            }
+
+            //Print the results in the end
+            document.write("<h1>Results</h1>")
+            document.write("<h2>Range: " + min + " to " + max + " (Inclusive)</h2>")
+            document.write("<h2>Odd Numbers in the Range: " + oddNumStr + "</h2>");
+            document.write("<h2>Sum of All Numbers in the Range: " + sum + "</h2>");
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
