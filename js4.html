@@ -4,6 +4,9 @@
         <script>
             firstNum = prompt("Give a number: ", 1);
             secondNum = prompt("Give another number: ", 10);
+            //First convert these values to integers for correct comparison
+            firstNum = parseInt(firstNum);
+            secondNum = parseInt(secondNum);
             //Use the small number as the minimum and the large number as the maximum
             min = 0;
             max = 0;
